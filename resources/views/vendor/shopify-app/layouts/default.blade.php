@@ -7,8 +7,6 @@
 
     <title>{{ \Osiset\ShopifyApp\Util::getShopifyConfig('app_name') }}</title>
     @yield('styles')
-
-    <link rel="stylesheet" href="https://unpkg.com/@shopify/polaris@9.8.0/build/esm/styles.css" />
 </head>
 
 <body>

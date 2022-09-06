@@ -1,18 +1,10 @@
 import enTranslations from "@shopify/polaris/locales/en.json";
-import {
-    AppProvider,
-    Page,
-    Card,
-    Button,
-    ButtonGroup,
-    Frame,
-    Navigation,
-} from "@shopify/polaris";
+import { AppProvider,Frame, Navigation } from "@shopify/polaris";
 import React from "react";
 import ReactDOM from "react-dom";
 import { HomeMinor, OrdersMinor, ProductsMinor } from "@shopify/polaris-icons";
 
-function Example() {
+function App() {
     return (
         <AppProvider i18n={enTranslations}>
             <Frame>
@@ -43,8 +35,8 @@ function Example() {
     );
 }
 
-export default Example;
+export default App;
 
 if (document.getElementById("root")) {
-    ReactDOM.render(<Example />, document.getElementById("root"));
+    ReactDOM.render(<App />, document.getElementById("root"));
 }
