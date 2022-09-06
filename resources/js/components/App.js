@@ -1,36 +1,14 @@
-import enTranslations from "@shopify/polaris/locales/en.json";
-import { AppProvider,Frame, Navigation } from "@shopify/polaris";
 import React from "react";
 import ReactDOM from "react-dom";
-import { HomeMinor, OrdersMinor, ProductsMinor } from "@shopify/polaris-icons";
+import { AppProvider, Button } from "@shopify/polaris";
+import en from '@shopify/polaris/locales/en.json';
+import "@shopify/polaris/build/esm/styles.css";
+
 
 function App() {
     return (
-        <AppProvider i18n={enTranslations}>
-            <Frame>
-                <Navigation location="/">
-                    <Navigation.Section
-                        items={[
-                            {
-                                url: "/",
-                                label: "Home",
-                                icon: HomeMinor,
-                            },
-                            {
-                                url: "/path/to/place",
-                                label: "Orders",
-                                icon: OrdersMinor,
-                                badge: "15",
-                            },
-                            {
-                                url: "/path/to/place",
-                                label: "Products",
-                                icon: ProductsMinor,
-                            },
-                        ]}
-                    />
-                </Navigation>
-            </Frame>
+        <AppProvider i18n={en}>
+            <Button>Add product</Button>
         </AppProvider>
     );
 }
